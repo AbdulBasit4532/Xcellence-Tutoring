@@ -597,6 +597,49 @@ select.form-input option {
     }
 }
 
+@media (max-width: 360px) {
+    :root {
+        --container-width: 100%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .welcome-section {
+        padding-top: 100px !important;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+
+    .moving-text {
+        font-size: 1.5rem;
+    }
+
+    .hero-content .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-content .cta-group .btn {
+        width: 100%;
+    }
+}
+
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
