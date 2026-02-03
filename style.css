@@ -502,6 +502,15 @@ select.form-input option {
     padding: 10px;
 }
 
+/* Responsive Header & Navigation */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--accent-primary);
+    cursor: pointer;
+    z-index: 1001;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
@@ -512,9 +521,48 @@ select.form-input option {
         font-size: 2rem;
     }
 
+    section {
+        padding: 4rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-primary);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition-smooth);
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1.25rem;
+    }
+
+    .header .btn-primary {
         display: none;
-        /* Mobile menu implementation later */
+        /* Hide in header, show in menu or just use home buttons */
     }
 
     .grid {
@@ -524,6 +572,28 @@ select.form-input option {
     .contact-container {
         grid-template-columns: 1fr;
         padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-split-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .moving-text {
+        font-size: 1.8rem;
     }
 }
 
