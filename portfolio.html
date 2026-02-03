@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Xcellence Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Xcellence
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="index.html#school">School Tuitions</a></li>
+                    <li><a href="index.html#programming">Programming</a></li>
+                    <li><a href="index.html#university">University</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding-bottom: 2rem;">
+            <div class="container hero-content">
+                <div class="profile-split-layout">
+                    <!-- Left Card: Image -->
+                    <div class="profile-image-card">
+                        <img src="assets/profile.jpg" alt="Basit Hassan - Profile">
+                    </div>
+
+                    <!-- Right Card: Content -->
+                    <div class="profile-content-card">
+                        <div class="badge">Instructor Profile</div>
+                        <h1>Basit Hassan</h1>
+                        <p
+                            style="color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem;">
+                            Gold Medalist (BSCS) | Founder of Xcellence Tutoring
+                        </p>
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7;">
+                            With vast experience in teaching and academic mentorship, I dedicate my career to empowering
+                            students in Science and Computer Science. Bridging the gap between traditional board
+                            education and modern technology to ensure every student achieves their highest potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Education</h2>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="school-outline"></ion-icon></div>
+                        <h3>Bachelors (BSCS)</h3>
+                        <p>FAST National University</p>
+                        <span class="tag" style="border-color: #ffd700; color: #ffd700;">Gold Medalist</span>
+                        <span class="tag">Computer Science</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="book-outline"></ion-icon></div>
+                        <h3>Intermediate</h3>
+                        <p>Adamjee Science College</p>
+                        <span class="tag">92% Score</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                        <h3>Matriculation</h3>
+                        <p>Bahria College Karsaz</p>
+                        <span class="tag">88% Score</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="grid" style="grid-template-columns: 1fr;">
+                    <!-- Using full width cards for experience details -->
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Senior Faculty</h3>
+                            <span class="tag">July 2025 - Present</span>
+                        </div>
+                        <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Aptech Learning Institute
+                        </h4>
+                        <p>Specialized in AI Primer, Machine Learning, and Deep Learning principles. Teaching Python,
+                            Pandas, NumPy, Matplotlib, and Seaborn.</p>
+                    </div>
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Data Science Auditor</h3>
+                            <span class="tag">2025 - June 2025</span>
+                        </div>
+                        <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Techzone Institute</h4>
+                        <p>Instructed on AI/ML models (Decision Trees, XGBoost), Deep Learning (RNN, CNN), NLP
+                            (Sentiment Analysis), and Computer Vision (YOLO, OpenCV).</p>
+                    </div>
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Teaching Assistant</h3>
+                            <span class="tag">Jan 2025 - May 2025</span>
+                        </div>
+                        <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">FAST National University</h4>
+                        <p>Assisted in Artificial Intelligence and OOP courses. Conducted lab sessions and evaluated
+                            assignments.</p>
+                    </div>
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Instructor</h3>
+                            <span class="tag">2021 - 2022</span>
+                        </div>
+                        <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Sir Wakeel’s Inn</h4>
+                        <p>Mentored IX and X students (Sindh/Federal Board) in Physics, Chemistry, Maths, and Computer
+                            Science.</p>
+                    </div>
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Board Classes Tutor</h3>
+                            <span class="tag">2019 - Present</span>
+                        </div>
+                        <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Private Tuition</h4>
+                        <p>Teaching IX & X grades across multiple boards (Sindh, Federal, Agha Khan). Designing
+                            customized lesson plans for Science subjects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="card">
+                    <div class="card-tags" style="justify-content: center; gap: 1rem;">
+                        <span class="tag"
+                            style="font-size: 1rem; padding: 0.5rem 1rem; border: 1px solid var(--accent-primary);">AI /
+                            ML / Deep Learning</span>
+                        <span class="tag"
+                            style="font-size: 1rem; padding: 0.5rem 1rem; border: 1px solid var(--accent-secondary);">Natural
+                            Language Processing (NLP)</span>
+                        <span class="tag"
+                            style="font-size: 1rem; padding: 0.5rem 1rem; border: 1px solid var(--accent-secondary);">Computer
+                            Vision (OpenCV, YOLO)</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Python (4 Years Exp)</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">C / C++</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Mathematics</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Physics</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Chemistry</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                        Xcellence
+                    </a>
+                    <p>Empowering the next generation of coders and scholars.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="index.html#programming">Python Crash Course</a></li>
+                        <li><a href="index.html#programming">Data Science Bundle</a></li>
+                        <li><a href="index.html#school">Class 9th/10th</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">basithassan2003@gmail.com</a></li>
+                        <li><a href="#">03132313490</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Xcellence Tutoring. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <a href="https://wa.me/923132313490" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+</body>
+
+</html>

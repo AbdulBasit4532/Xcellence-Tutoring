@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now | Xcellence Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Initialize EmailJS with Public Key
+            emailjs.init("EzUCb0QLf-q6eZ_iB");
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Xcellence
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html#school">School Tuitions</a></li>
+                    <li><a href="index.html#programming">Programming</a></li>
+                    <li><a href="index.html#university">University</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section" style="padding-top: 150px; min-height: 100vh;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Student Registration</h2>
+                    <p>Take the first step towards academic excellence. Fill out the form below to secure your spot.</p>
+                </div>
+
+                <div class="contact-container" style="max-width: 800px; margin: 0 auto; display: block;">
+                    <form class="contact-form" id="enroll-form">
+
+
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 0;">
+                            <div class="form-group">
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Student
+                                    Name</label>
+                                <input type="text" name="name" class="form-input" placeholder="Enter full name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Phone
+                                    Number</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="03XXXXXXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Email
+                                Address</label>
+                            <input type="email" name="email" class="form-input" placeholder="email@example.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Type of
+                                Tuition</label>
+                            <select name="tuition_type" class="form-input" id="tuitionType">
+                                <option value="" disabled selected>Select Tuition Type</option>
+                                <option value="school">School Tuition (9th/10th)</option>
+                                <option value="programming">Programming/Coding Course</option>
+                                <option value="university">University CS Subject</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Specific
+                                Subject / Course Interest</label>
+                            <input type="text" name="subject_interest" class="form-input"
+                                placeholder="e.g. Agha Khan Board Math, Python, OOP..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Additional
+                                Message (Optional)</label>
+                            <textarea name="message" class="form-input"
+                                placeholder="Any specific requirements or questions?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                            Submit Registration
+                            <ion-icon name="checkmark-circle-outline" style="margin-left: 8px;"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                <p>&copy; 2025 Xcellence Tutoring. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/923132313490" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xcellence Tutoring | Master Code & Academics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Ionicons for Iconography -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Initialize EmailJS with Public Key
+            emailjs.init("EzUCb0QLf-q6eZ_iB");
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Xcellence
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#school">School Tuitions</a></li>
+                    <li><a href="#programming">Programming</a></li>
+                    <li><a href="#university">University</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="badge">Accelerate Your Future</div>
+                <h1>Master <span class="gradient-text">Programming</span> <br>& Excel in <span
+                        class="gradient-text">Academics</span></h1>
+                <p>Expert online tuitions for 9th & 10th grade across all major boards, plus comprehensive programming
+                    courses from Python to AI & Machine Learning.</p>
+                <div class="cta-group">
+                    <a href="#programming" class="btn btn-primary">
+                        Browse Courses
+                        <ion-icon name="arrow-forward-outline" style="margin-left: 8px;"></ion-icon>
+                    </a>
+                    <a href="#school" class="btn btn-outline">Academic Tuitions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- School Tuitions Section -->
+        <section id="school">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Academic Excellence</h2>
+                    <p>Comprehensive tuition for 9th & 10th Grade. Tailored curriculum for Sindh, Agha Khan, Federal,
+                        and Punjab Boards.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="school-outline"></ion-icon></div>
+                        <h3>Sindh Board</h3>
+                        <p>Complete syllabus coverage with past paper practice and exam techniques.</p>
+                        <div class="card-tags">
+                            <span class="tag">Physics</span>
+                            <span class="tag">Maths</span>
+                            <span class="tag">Computer</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="library-outline"></ion-icon></div>
+                        <h3>Agha Khan Board</h3>
+                        <p>Focus on conceptual learning and inquiry-based assessments matching AKU-EB standards.</p>
+                        <div class="card-tags">
+                            <span class="tag">Biology</span>
+                            <span class="tag">Chemistry</span>
+                            <span class="tag">English</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="globe-outline"></ion-icon></div>
+                        <h3>Federal Board</h3>
+                        <p>Rigorous preparation for FBISE exams with focus on SLO-based learning.</p>
+                        <div class="card-tags">
+                            <span class="tag">Science</span>
+                            <span class="tag">Maths</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="book-outline"></ion-icon></div>
+                        <h3>Punjab Board</h3>
+                        <p>Standardized curriculum teaching ensuring strong foundations in all core subjects.</p>
+                        <div class="card-tags">
+                            <span class="tag">All Subjects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming Section -->
+        <section id="programming" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Code Academy</h2>
+                    <p>Launch your tech career with our crash courses. From beginner Python to Advanced AI.</p>
+                </div>
+                <div class="grid">
+                    <!-- Python -->
+                    <div class="card">
+                        <div class="card-icon" style="color: #FDCB58;"><ion-icon name="logo-python"></ion-icon></div>
+                        <h3>Python Programming</h3>
+                        <p>The perfect starting point. Learn syntax, logic, and build your first applications.</p>
+                    </div>
+                    <!-- Data Science -->
+                    <div class="card">
+                        <div class="card-icon" style="color: #FF7675;"><ion-icon name="analytics-outline"></ion-icon>
+                        </div>
+                        <h3>Data Science</h3>
+                        <p>Master the power of data with AI, Machine Learning, and Deep Learning fundamentals.</p>
+                    </div>
+                    <!-- Data Analysis -->
+                    <div class="card">
+                        <div class="card-icon" style="color: #74B9FF;"><ion-icon name="bar-chart-outline"></ion-icon>
+                        </div>
+                        <h3>Data Analysis</h3>
+                        <p>Business Intelligence with Power BI. Transform raw data into actionable insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Section -->
+        <section id="university">
+            <div class="container">
+                <div class="section-header">
+                    <h2>CS University Tuitions</h2>
+                    <p>Struggling with complex CS concepts? We simplify them for you.</p>
+                </div>
+                <!-- Updated Grid with exact subjects requested -->
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="code-slash-outline"></ion-icon></div>
+                        <h3>Programming Fundamentals</h3>
+                        <p>Logic building, C++, C, Java syntax mastery, and problem-solving.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="cube-outline"></ion-icon></div>
+                        <h3>OOP</h3>
+                        <p>Object Oriented Programming: Classes, Inheritance, Polymorphism.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="git-network-outline"></ion-icon></div>
+                        <h3>Data Structures</h3>
+                        <p>Arrays, Linked Lists, Trees, Graphs, Hashing, and Algorithms.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Search algorithms, Game Theory, Neural Networks, and Expert Systems.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="calculator-outline"></ion-icon></div>
+                        <h3>Calculus</h3>
+                        <p>Differentiation, Integration, Limits, and Multivariable Calculus.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="stats-chart-outline"></ion-icon></div>
+                        <h3>Prob & Statistics</h3>
+                        <p>Probability distributions, Hypothesis testing, and Statistical inference.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="wifi-outline"></ion-icon></div>
+                        <h3>Computer Networks</h3>
+                        <p>OSI Model, TCP/IP, Subnetting, Routing, and Network Security.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><ion-icon name="desktop-outline"></ion-icon></div>
+                        <h3>Operating Systems</h3>
+                        <p>Process management, Concurrency, Deadlocks, and Memory management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="badge">Get in Touch</div>
+                        <h3>Start Learning Today</h3>
+                        <p>Ready to excel? Send us a message to schedule your first class or get more information about
+                            our crash courses.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <span>basithassan2003@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <span>03132313490</span>
+                            </div>
+                            <div class="contact-item">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <span>Online Platform (Zoom/Meet)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <!-- Hidden inputs not needed for EmailJS, handled in JS -->
+
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="interest" class="form-input">
+                                <option value="" disabled selected>Select Course Interest</option>
+                                <option value="School Tuition">School Tuition (9th/10th)</option>
+                                <option value="Programming Course">Programming Crash Course</option>
+                                <option value="University Subject">University CS Subject</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-input" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message
+                            <ion-icon name="paper-plane-outline" style="margin-left: 8px;"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                        Xcellence
+                    </a>
+                    <p>Empowering the next generation of coders and scholars.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#">Python Crash Course</a></li>
+                        <li><a href="#">Data Science Bundle</a></li>
+                        <li><a href="#">Class 9th/10th</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">basithassan2003@gmail.com</a></li>
+                        <li><a href="#">03132313490</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Xcellence Tutoring. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <a href="https://wa.me/923132313490" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+</body>
+
+</html>
