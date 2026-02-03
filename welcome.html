@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Xcellence Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Xcellence
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="enroll.html" class="btn btn-outline">New Enrollment</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section"
+            style="padding-top: 150px; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="container">
+
+                <!-- Moving Text Animation Container -->
+                <div class="moving-text-container">
+                    <h1 class="moving-text">Welcome to Xcellence Tutoring! <span id="display-name-anim"></span></h1>
+                </div>
+
+                <div class="card profile-content-card" style="max-width: 600px; margin: 3rem auto; padding: 3rem;">
+                    <div style="margin-bottom: 2rem;">
+                        <ion-icon name="checkmark-circle"
+                            style="font-size: 4rem; color: var(--color-success);"></ion-icon>
+                    </div>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Registration Received</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Thank you for enrolling with us. We
+                        have received your details and will contact you shortly.</p>
+
+                    <div
+                        style="text-align: left; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--border-radius-sm); margin-bottom: 2rem;">
+                        <h3
+                            style="font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;">
+                            Submission Details</h3>
+                        <p><strong>Name:</strong> <span id="display-name">Loading...</span></p>
+                        <p><strong>Course:</strong> <span id="display-course">Loading...</span></p>
+                        <p><strong>Subject Interest:</strong> <span id="display-subject">Loading...</span></p>
+                    </div>
+
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                <p>&copy; 2025 Xcellence Tutoring. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve data from sessionStorage
+            const data = JSON.parse(sessionStorage.getItem('enrollmentData'));
+
+            if (data) {
+                document.getElementById('display-name').textContent = data.name || 'Student';
+                document.getElementById('display-course').textContent = data.type || 'General';
+                document.getElementById('display-subject').textContent = data.subject || 'Not specified';
+
+                // For the animation
+                document.getElementById('display-name-anim').textContent = data.name ? `- ${data.name}` : '';
+            } else {
+                // Fallback if accessed directly without submission
+                document.getElementById('display-name').textContent = 'Guest';
+                document.getElementById('display-course').textContent = '-';
+                document.getElementById('display-subject').textContent = '-';
+            }
+        });
+    </script>
+</body>
+
+</html>

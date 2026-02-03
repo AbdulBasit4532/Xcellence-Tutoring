@@ -101,9 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    alert("Thanks for contacting Xcellence Turtoring ! We'll get back to you soon");
-                    btn.innerHTML = originalText;
-                    enrollForm.reset();
+                    // Capture data for welcome page
+                    const formData = new FormData(this);
+                    const enrollmentData = {
+                        name: formData.get('name'),
+                        type: formData.get('tuition_type'),
+                        subject: formData.get('subject_interest')
+                    };
+                    sessionStorage.setItem('enrollmentData', JSON.stringify(enrollmentData));
+
+                    // Redirect to welcome page
+                    window.location.href = 'welcome.html';
                 }, (err) => {
                     btn.innerHTML = originalText;
                     console.error('EmailJS Error:', err);
