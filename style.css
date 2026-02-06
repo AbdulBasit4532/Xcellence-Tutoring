@@ -1,44 +1,44 @@
 :root {
-    /* Color Palette - Clean Modern White/Gradient */
-    --bg-primary: #FFFFFF;
-    /* Pure White */
-    --bg-secondary: #F8FAFC;
-    /* Off-White */
-    --bg-card: #FFFFFF;
-    /* White cards */
-    --bg-glass: rgba(255, 255, 255, 0.95);
+    /* Color Palette - Vibrant Purple-Pink Dark Theme */
+    --bg-primary: #0D0221;
+    /* Very Deep Purple-Black */
+    --bg-secondary: #1A0B2E;
+    /* Deep Purple */
+    --bg-card: rgba(30, 10, 60, 0.4);
+    /* Translucent Dark Purple */
+    --bg-glass: rgba(13, 2, 33, 0.85);
 
-    --accent-primary: #2563EB;
-    /* Blue */
-    --accent-secondary: #7C3AED;
-    /* Purple */
-    --accent-glow: rgba(124, 58, 237, 0.2);
+    --accent-primary: #A855F7;
+    /* Vibrant Purple */
+    --accent-secondary: #EC4899;
+    /* Vibrant Pink */
+    --accent-glow: rgba(236, 72, 153, 0.3);
 
     --color-success: #10B981;
     /* Emerald Green */
 
     /* Text Colors - High Contrast */
-    --text-primary: #1F2937;
-    /* Dark Gray / Near Black */
-    --text-secondary: #4B5563;
-    /* Medium Gray */
-    --text-muted: #9CA3AF;
-    /* Light Gray */
+    --text-primary: #FFFFFF;
+    /* Pure White */
+    --text-secondary: #E9D5FF;
+    /* Light Purple-Grey */
+    --text-muted: #A855F7;
+    /* Purple */
 
-    /* Gradient - Blue to Purple */
-    --gradient-main: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    /* Gradient - Pink to Purple */
+    --gradient-main: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
 
     /* Spacing & Layout */
     --container-width: 1200px;
     --header-height: 80px;
-    --border-radius-lg: 16px;
-    --border-radius-sm: 8px;
+    --border-radius-lg: 24px;
+    --border-radius-sm: 12px;
 
     /* Effects */
-    --glass-border: 1px solid #E5E7EB;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --glass-border: 1px solid rgba(236, 72, 153, 0.1);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -51,10 +51,54 @@
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-primary);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
-    /* Very subtle noise or pure white */
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Vibrant Purple-Pink Animated Background */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.45;
+    animation: moveVibrantBlobs 25s infinite alternate ease-in-out;
+}
+
+body::before {
+    background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+    top: -20%;
+    left: -20%;
+}
+
+body::after {
+    background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+    bottom: -20%;
+    right: -20%;
+    animation-delay: -12.5s;
+}
+
+@keyframes moveVibrantBlobs {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(10vw, 15vh) scale(1.2) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-10vw, 30vh) scale(1) rotate(360deg);
+    }
 }
 
 /* Typography */
@@ -143,10 +187,10 @@ header {
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background: var(--bg-primary);
-    /* Solid color instead of glass */
-    /* backdrop-filter: blur(12px); Removed to prevent milky look */
-    border-bottom: 1px solid #1f1f2e;
+    background: var(--bg-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: var(--glass-border);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -196,6 +240,20 @@ nav a.active {
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -248,7 +306,8 @@ section {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
-    /* Gradient Top Border Effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .card::before {
@@ -262,10 +321,10 @@ section {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    background: #FFFFFF;
-    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
-    border-color: rgba(37, 99, 235, 0.2);
+    transform: translateY(-8px);
+    background: rgba(45, 15, 80, 0.6);
+    box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+    border-color: var(--accent-secondary);
 }
 
 .card-icon {
@@ -466,21 +525,19 @@ footer {
 
 .form-input {
     width: 100%;
-    background: #F8FAFC;
-    /* Light gray background */
-    border: 1px solid #E2E8F0;
-    /* Visible border */
+    background: rgba(30, 10, 60, 0.5);
+    border: 1px solid rgba(236, 72, 153, 0.2);
     padding: 1rem;
     border-radius: var(--border-radius-sm);
-    color: var(--text-primary);
+    color: white;
     font-family: inherit;
     transition: var(--transition-smooth);
 }
 
 .form-input:focus {
     outline: none;
-    border-color: var(--accent-primary);
-    background: #FFFFFF;
+    border-color: var(--accent-secondary);
+    background: rgba(30, 10, 60, 0.8);
     box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
